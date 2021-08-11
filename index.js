@@ -1,18 +1,14 @@
 "use strict";
 
 // arrays for destination, restuarant, transportation, and entertainment options
-
 let destinationArray = ["Denver", "Las Vegas", "Phoenix", "Seattle"];
 let restaurantArray = ["Yard House", "Buffalo Wild Wings", "Capital Grille", "Cheesecake Factory"];
 let transportationArray = ["car", "airplane", "train", "bus"];
 let entertainmentArray = ["a sporting event", "a concert", "hiking", "shopping"];
 
-
 // functions for generating random destination
-
 function getRandomItem(list) {
     let tripItem = list[Math.floor(Math.random() * list.length)];
-            //console.log(randomDestination);
             return tripItem;
 }
 
@@ -21,12 +17,6 @@ let restaurant = getRandomItem(restaurantArray);
 let transportation = getRandomItem(transportationArray);
 let entertainment = getRandomItem(entertainmentArray);
 
-
-// user's current randomly generated trip
-//console.log("Your trip to " + destination + " via " + transportation + " to enjoy " + entertainment + " and eat at " + restaurant + " is ready!");  //change to alert or remove
-//alert("Your trip to " + destination + " via " + transportation + " to enjoy " + entertainment + " and eat at " + restaurant + " is ready!");
-
-
 // function for user's acceptance of current randomly generated trip
 function userAcceptTrip() {
     alert("Your trip to " + destination + " via " + transportation + " to enjoy " + entertainment + " and eat at " + restaurant + " is ready!");
@@ -34,7 +24,6 @@ function userAcceptTrip() {
     let acceptableTripUserInput = confirm("Is this trip acceptable?");
         return acceptableTripUserInput;
 }
-
 
 // Loop to ask user which item of the trip they would like to change if they did not accept the current trip (userAcceptTrip function)
 let continueTripAcceptance = true;
@@ -49,13 +38,10 @@ while(continueTripAcceptance) {
     }
 }
 
-
-// Function for user to confirm the trip after first accepting it (userAcceptTrip function)
+// Function to print accepted trip to console (userAcceptTrip function)
 function confirmTrip () {
-        
-        console.log("Your trip to " + destination + " via " + transportation + " to enjoy " + entertainment + " and eat at " + restaurant + " is ready!");       
+        console.log(`Your trip to ${destination} via ${transportation} to enjoy ${entertainment} and eat at ${restaurant} is ready!`);
 }
-
 
 // function for user changes to the destination, transportation, entertainment, or restaurant of the trip
 function userChanges() {
